@@ -1,22 +1,22 @@
-from flask import Flask, render_template, request, jsonify
+import os
+from routes import route
+from mimes import get_mime
 
-app = Flask(__name__)
+def load(file_name):
+    f = open(file_name, encoding='utf-8')
+    data = f.read()
+    f.close()
+    return data
 
-messages = []
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/send_message', methods=['POST'])
-def send_message():
-    message = request.form['message']
-    messages.append(message)
-    return jsonify({"message": message})
-
-@app.route('/get_messages')
-def get_messages():
-    return jsonify({"messages": messages})
-
-if __name__ == '__main__':
-    app.run()
+def app(environ, start_response):
+    """
+    (dict, callable( status: str,
+                     headers: list[(header_name: str, header_value: str)]))
+                  -> body: iterable of strings_
+    """
+    status = '200 OK'
+    file_name = route(environ['REQUEST_URI'])
+    response_headers = [('Content-type', get_mime(file_name))]
+    start_response(status, response_headers)
+    
+    return [bytes(load(f"bogdangram\\" + file_name), "utf-8")]
