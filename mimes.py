@@ -1,7 +1,7 @@
 mimes = {
     '.html': 'text/html',
     '.css': 'text/css',
-    '.js': 'text/js'
+    '.js': 'text/javascript'
 }
 
 def get_mime(file_name):
