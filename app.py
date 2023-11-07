@@ -1,6 +1,9 @@
 import os
-from routes import route
+import re
+from routes import routes
 from mimes import get_mime
+from views import View
+
 
 def load(file_name):
     f = open(file_name, encoding='utf-8')
@@ -14,9 +17,17 @@ def app(environ, start_response):
                      headers: list[(header_name: str, header_value: str)]))
                   -> body: iterable of strings_
     """
-    status = '200 OK'
-    file_name = route(environ['REQUEST_URI'])
-    response_headers = [('Content-type', get_mime(file_name))]
+    url = environ['REQUEST_URI']
+    for key in routes.keys():
+        print('url', url, 'key', key)
+        if re.match(key, url) is not None:
+            view = routes[key](url)
+    resp = view.response()
+    # Возвращаем HTTP-ответ с сгенерированной страницей
+    status = resp.status#'200 OK'
+    #file_name = route(environ['REQUEST_URI'])
+    response_headers = resp.headers
     start_response(status, response_headers)
-    
-    return [bytes(load(f"bogdangram\\" + file_name), "utf-8")]
+    return [bytes(resp.data, "utf-8")]
+   
+ 
