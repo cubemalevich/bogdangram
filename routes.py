@@ -1,13 +1,16 @@
+from views import *
+
 routes = {
-    '/static/': 'static/',
-    '/': 'templates/' 
+    '/static/': View,
+    '/$': IndexView,
+    '/get_message': GetMessageView
 }
 
 def route(url):
     """
-    Преобразовывает url в путь к файлу
+    Преобразовывает URL в путь к файлу в соответствии с определенными маршрутами.
     """
     for key in routes.keys():
-        if url.find(key) == 0:
-            return url.replace(key, routes[key])
-    return url
+        if url.startswith(key):
+            return routes[key] + url[len(key):]
+        return url
