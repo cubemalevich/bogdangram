@@ -9,7 +9,7 @@
 
 ## Установка
 
-Для работы потребуется [Python](https://www.python.org/downloads/) и библеотеки 
+Для работы потребуется [Python](https://www.python.org/downloads/) и библиотеки 
 - [Waitress](https://pypi.org/project/waitress/) - Веб сервер 
 ```sh
 pip install Waitress
