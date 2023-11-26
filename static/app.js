@@ -31,8 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
             messageInput.value = "";
             fetch("/send_message", {
                 method: "POST",
-                body: new URLSearchParams({ message }),
+                body: new URLSearchParams({ message }), 
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                
+            })
+            .catch((error) => {
+                console.error("There was a problem with the fetch operation:", error);
+        
             });
         }
     });
