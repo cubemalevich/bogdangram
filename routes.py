@@ -3,7 +3,8 @@ from views import *
 routes = {
     '/static/': View,
     '/$': IndexView,
-    '/get_message': GetMessageView
+    '/get_message': GetMessageView,
+    '/send_message': SendMessageView
 }
 
 def route(url):
