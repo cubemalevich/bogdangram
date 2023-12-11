@@ -11,7 +11,16 @@ conn = sqlite3.connect('messages.db')
 # Создание курсора для выполнения SQL-запросов
 cursor = conn.cursor()
 
-# Создание таблицы для хранения сообщений, если она не существует
+# Создание таблицы для хранения учетных данных пользователей
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    )
+''')
+
+# Создание таблицы для хранения сообщений
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
