@@ -4,7 +4,9 @@ routes = {
     '/static/': View,
     '/$': IndexView,
     '/get_message': GetMessageView,
-    '/send_message': SendMessageView
+    '/send_message': SendMessageView,
+    '/register': RegisterView,
+    '/login': LoginView   
 }
 
 def route(url):
