@@ -99,9 +99,11 @@ class RegisterView(TemplateView):
     def response(self, environ):
         if environ['REQUEST_METHOD'] == 'GET':
             return super().response(environ)
-        elif environ['REQUEST_METHOD'] == 'POST':
-            username = self.get_post_data(environ, 'username')
-            password = self.get_post_data(environ, 'password')
+        if environ['REQUEST_METHOD'] == 'POST':
+            data = self.get_post_data(environ)
+            username = data['username']
+            password = data['password']
+            print(f"Received username 1st step: {username}, password: {password}")  
 
             if username and password:
                 success = self.register_user(username, password) 
@@ -117,9 +119,11 @@ class RegisterView(TemplateView):
                 status = '400 Bad Request'
                 headers = [('Content-type', 'application/json')]
                 data = json.dumps({'error': 'Invalid username or password'})
-                
-
-            return Response(status, headers, data)
+        else:
+            status = '400 Bad Request'
+            headers = [('Content-type', 'application/json')]
+            data = json.dumps({'error': 'Invalid username or password'})
+        return Response(status, headers, data)
         
     def register_user(self, username, password):
         print(f"Received username reg_us: {username}, password: {password}")  
@@ -140,13 +144,12 @@ class RegisterView(TemplateView):
         conn.close()
         return True  # Пользователь успешно зарегистрирован
 
-    def get_post_data(self, environ, key):
+    def get_post_data(self, environ):
         try:
             request_body_size = int(environ.get('CONTENT_LENGTH', 0))
             request_body = environ['wsgi.input'].read(request_body_size).decode('utf-8')
-            parsed_body = parse_qs(request_body)
-            data = parsed_body.get(key, [''])[0]
-            print(f"Received data for {key}: {data}")  # Добавим отладочное сообщение
+            print("body", request_body)
+            data = json.loads(request_body)
             return data
         except Exception as e:
             print(f"Error while extracting {key}: {e}")
