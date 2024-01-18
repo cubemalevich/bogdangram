@@ -218,11 +218,6 @@ class SendMessageView(View):
 
         return nickname[0] if nickname else 'Guest'  # Замените 'Guest' на значение по умолчанию
 
-
-
-
-
-
 class IndexView(TemplateView):
     template = 'templates/index.html'
 
