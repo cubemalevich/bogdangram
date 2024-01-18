@@ -1,34 +1,34 @@
 import os
 import re
-from routes import routes
-from mimes import get_mime
-from views import View
 import sqlite3
 
-# Создание подключения к базе данных SQLite
-conn = sqlite3.connect('messages.db')
+from routes import routes
+from mimes import get_mime
+from views import NotFoundView
 
-# Создание курсора для выполнения SQL-запросов
+conn = sqlite3.connect('messages.db')
 cursor = conn.cursor()
 
-# Создание таблицы для хранения учетных данных пользователей
+# Таблица учетных данных пользователей
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT UNIQUE NOT NULL,
-        password TEXT NOT NULL
+        username TEXT NOT NULL,
+        password TEXT NOT NULL,
+        user_id INTEGER,  -- Добавляем новый столбец
+        UNIQUE (username)
     )
 ''')
-
-# Создание таблицы для хранения сообщений
+# Таблица сообщений
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS messages (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        message_text TEXT NOT NULL
+        message_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER,
+        message_text TEXT NOT NULL,
+        timestamp INTEGER
     )
 ''')
 
-# Закрытие соединения с базой данных
 conn.close()
 
 def load(file_name):
@@ -54,14 +54,17 @@ def app(environ, start_response):
     if view is None:
         view = NotFoundView(url)
     
-    # Изменение вызова метода response(), передаем только один аргумент
-    resp = view.response(environ)  # Передаем environ в метод response()
+    # Изменение вызова метода response(), передаем environ и start_response
+    resp = view.response(environ, start_response)  # Передаем environ в метод response()
     # Возвращаем HTTP-ответ с сгенерированной страницей
-    status = resp.status    #'200 OK'
-    #file_name = route(environ['REQUEST_URI'])
-    response_headers = resp.headers
-    start_response(status, response_headers)
-    return [bytes(resp.data, "utf-8")]
+    return resp
 
-   
- 
+    
+    # Изменение вызова метода response(), передаем только один аргумент
+    #resp = view.response(environ, start_response)  # Передаем environ в метод response()
+    # Возвращаем HTTP-ответ с сгенерированной страницей
+    #status = resp.status    #'200 OK'
+    #file_name = route(environ['REQUEST_URI'])
+    #response_headers = resp.headers
+    #start_response(status, response_headers)
+    #return [bytes(resp.data, "utf-8")]
