@@ -5,18 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         console.log("Form submitted");
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        
-        const requestBody = { username, password };
+        const usernameInput = document.getElementById("username");
+        const passwordInput = document.getElementById("password");
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        const requestBody = new URLSearchParams({ username, password });
         console.log("Request body:", requestBody); // Проверка содержимого запроса
-        
+
         fetch('/register', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: JSON.stringify(requestBody)
+            body: requestBody
         }).then(response => {
             console.log("Server response:", response); // Проверка ответа от сервера
 
