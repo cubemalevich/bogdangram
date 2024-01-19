@@ -15,7 +15,7 @@ cursor.execute('''
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,
         password TEXT NOT NULL,
-        user_id INTEGER,  -- Добавляем новый столбец
+        user_id INTEGER,  
         UNIQUE (username)
     )
 ''')
@@ -24,6 +24,7 @@ cursor.execute('''
     CREATE TABLE IF NOT EXISTS messages (
         message_id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
+        sender TEXT NOT NULL,
         message_text TEXT NOT NULL,
         timestamp INTEGER
     )
@@ -54,8 +55,7 @@ def app(environ, start_response):
     if view is None:
         view = NotFoundView(url)
     
-    # Изменение вызова метода response(), передаем environ и start_response
-    resp = view.response(environ, start_response)  # Передаем environ в метод response()
+    resp = view.response(environ, start_response)  
     # Возвращаем HTTP-ответ с сгенерированной страницей
     return resp
 

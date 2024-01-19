@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            window.location.replace("/");
+            window.location.replace("/login");
             //return response.json();
         }).then(data => {
             console.log(data.message); // Вывод сообщения об успешной регистрации

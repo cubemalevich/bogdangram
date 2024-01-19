@@ -68,9 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch('/get_user_id')
             .then(response => response.json())
             .then(data => {
-                console.log("After fetching user_id. Current user_id:", data.user_id, "nick:", username);
                 localStorage.setItem('username', username);
-                console.log("User ID and username saved to localStorage:",username);
             })
             .catch(error => {
                 console.error("Error fetching user_id:", error);
