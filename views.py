@@ -21,12 +21,14 @@ class View:
     def response(self, environ, start_response):
         file_name = self.path + self.url
         headers = [('Content-type', get_mime(file_name))]
+
         try:
             data = self.read_file(file_name[1:])
             status = '200 OK'
         except FileNotFoundError:
             data = ''
             status = '404 Not found'
+
         start_response(status, headers)
         return [data.encode('utf-8')]
 
@@ -77,32 +79,34 @@ class GetMessageView(View):
 
         self.last_timestamp = timestamp
 
+        print(f"Sending messages: {data}")
+
         start_response(status, headers)
         return [data.encode('utf-8')]
 
     def get_new_messages_from_db(self, message_id):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
-        cursor.execute('SELECT message_text, timestamp FROM messages WHERE message_id > ?', (message_id,))
+        cursor.execute('SELECT sender, message_text, timestamp FROM messages WHERE message_id > ?', (message_id,))
         messages = cursor.fetchall()
         conn.close()
 
         if messages:
-            timestamp = max(msg[1] for msg in messages)
+            timestamp = max(msg[2] for msg in messages)
         else:
             timestamp = self.last_timestamp
 
-        return [message[0] for message in messages], timestamp
-    
+        formatted_messages = [
+            {'sender': msg[0], 'message_text': msg[1].split(': ', 1)[1]} if msg[0] else {'sender': 'Guest', 'message_text': msg[1].split(': ', 1)[1]} for msg in messages
+        ]
+
+        return formatted_messages, timestamp    
 
 class GetUserIdView(View):
-
-    # Функция для получения user_id из базы данных по имени пользователя
     def fetch_user_id_from_database(self, username):
         connection = sqlite3.connect('messages.db')
         cursor = connection.cursor()
 
-        # Используем параметризованный запрос для предотвращения SQL-инъекций
         cursor.execute("SELECT user_id FROM users WHERE username=?", (username,))
         
         user_id = cursor.fetchone()
@@ -153,33 +157,35 @@ class GetUserIdView(View):
         
 class SendMessageView(View):
     def response(self, environ, start_response):
-        message, user_id = self.get_message_and_user_from_request(environ)
+        message, username = self.get_message_and_user_from_request(environ)
+        #print("Data before sending:", message, username)
 
-        if message and user_id:
+        if message and username:
             timestamp = int(time.time())
-            #nickname = self.get_nickname_from_database(user_id)
-            full_message = "{message}"
-            self.save_message_to_db(full_message, user_id, timestamp)
+            username = self.get_nickname_from_database(username) or 'Guest'
+            full_message = f"{username}: {message}"
+            self.save_message_to_db(full_message, username, timestamp)
 
             status = '200 OK'
             headers = [('Content-type', 'application/json')]
             data = json.dumps({'message': 'Сообщение успешно получено и сохранено'})
+            #print("Data after sending:", message, username)
         else:
             status = '400 Bad Request'
             headers = [('Content-type', 'application/json')]
             data = json.dumps({'error': 'Неверное сообщение или пользователь'})
+            #print("Data after sending:", message, username)
 
         start_response(status, headers)
         return [data.encode('utf-8')]
     
-    def save_message_to_db(self, message, user_id, timestamp):
+    def save_message_to_db(self, message, username, timestamp):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO messages (user_id, sender, message_text, timestamp) VALUES (?, ?, ?, ?)',
-                    (user_id, self.get_nickname_from_database(user_id), message, timestamp))
+        user_id = self.get_nickname_from_database(username)
+        cursor.execute('INSERT INTO messages (user_id, sender, message_text, timestamp) VALUES (?, ?, ?, ?)', (user_id, username, message, timestamp))
         conn.commit()
         conn.close()
-
 
     def get_message_and_user_from_request(self, environ):
         try:
@@ -189,34 +195,33 @@ class SendMessageView(View):
             parsed_body = json.loads(request_body)
 
             message = parsed_body.get('message', '')
-            user_id = parsed_body.get('user_id', '')
+            username = parsed_body.get('username', '') or 'Guest'
 
-            if not message or not user_id:
-                raise ValueError("Invalid message or user_id")
+            if not message or not username:  
+                raise ValueError("Invalid message or username")
 
-            return message, user_id
+            print(f"Received message: {message}, username: {username}")
+
+            return message, username
         except ValueError as ve:
             print(f"ValueError: {ve}")
             return None, None
         except Exception as e:
-            print(f"Error while extracting message and user_id: {e}")
+            print(f"Error while extracting message, username, and user_id: {e}")
             return None, None
 
-        
 
-    def get_nickname_from_database(self, user_id):
+    def get_nickname_from_database(self, username):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
-        cursor.execute('SELECT username FROM users WHERE user_id=?', (user_id,))
+        cursor.execute('SELECT username FROM users WHERE username=?', (username,))
         nickname = cursor.fetchone()
         conn.close()
 
         if nickname:
-            print(f"Nickname found in the database: {nickname[0]}")
             return nickname[0]
         else:
-            print(f"Nickname not found in the database for user_id: {user_id}")
-            return 'Guest' #Гостевой пользователь
+            return None
 
 
 class IndexView(TemplateView):
@@ -260,10 +265,8 @@ class RegisterView(TemplateView):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
 
-        # Генерируем уникальный идентификатор пользователя
-        user_id = uuid.uuid4().hex
+        user_id = uuid.uuid4().hex # Генерируем уникальный идентификатор пользователя
 
-        # Проверяем, есть ли уже пользователь с таким именем
         cursor.execute('SELECT * FROM users WHERE username=?', (username,))
         existing_user = cursor.fetchone()
 
@@ -271,9 +274,7 @@ class RegisterView(TemplateView):
             conn.close()
             return False  # Пользователь с таким именем уже существует
 
-        # Если пользователь не найден, регистрируем нового
         cursor.execute('INSERT INTO users (username, password, user_id) VALUES (?, ?, ?)', (username, password, user_id))
-        cursor.execute('INSERT INTO messages (user_id) VALUES (?)', (user_id,))
         conn.commit()
         conn.close()
         return True  # Пользователь успешно зарегистрирован
@@ -281,7 +282,7 @@ class RegisterView(TemplateView):
     def get_post_data(self, request, key):
         try:
             data = request.POST.get(key, '')
-            print(f"Received data for {key}: {data}")  # Добавим отладочное сообщение
+            #print(f"Received data for {key}: {data}") 
             return data
         except Exception as e:
             print(f"Error while extracting {key}: {e}")
@@ -300,7 +301,6 @@ class LoginView(TemplateView):
             if username and password:
                 user_id = self.authenticate_user(username, password)
                 if user_id:
-                    # Вместо редиректа возвращаем JSON с информацией о редиректе
                     status = '200 OK'
                     headers = [('Content-type', 'application/json')]
                     data = json.dumps({'redirect': '/', 'user_id': str(user_id[0])})  
@@ -325,18 +325,17 @@ class LoginView(TemplateView):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
 
-        print(f"Received username: {username}, password: {password}")
-        
-        # Проверяем, существует ли пользователь с таким именем и паролем
+        #print(f"Received username: {username}, password: {password}")
+    
         cursor.execute('SELECT user_id FROM users WHERE username=? AND password=?', (username, password))
         user_id = cursor.fetchone()
 
-        conn.close()
+        conn.close()    
 
-        # Если пользователь существует, возвращаем его ID, иначе None
-        print("Authenticated user_id:", user_id)  
+        #print("Authenticated user_id:", user_id)  
 
-        return user_id
+        return str(user_id[0]) if user_id else None
+
 
 
     def get_post_data(self, request):
