@@ -95,10 +95,6 @@ class GetMessageView(View):
         return [message[0] for message in messages], timestamp
     
 
-
-
-
-
 class GetUserIdView(View):
 
     # Функция для получения user_id из базы данных по имени пользователя
@@ -117,7 +113,12 @@ class GetUserIdView(View):
         return user_id[0] if user_id else None
 
     def response(self, environ, start_response):
-        headers = [('Content-type', 'application/json')]
+        headers = [
+            ('Content-type', 'application/json'),
+            ('Access-Control-Allow-Origin', 'http://localhost:8000'),  
+            ('Access-Control-Allow-Credentials', 'true'), 
+            ]
+
         request = Request(environ)
 
         user_id_cookie = request.cookies.get('user_id')
@@ -131,43 +132,33 @@ class GetUserIdView(View):
 
         if user_id is None:
             print("User ID is None. Cannot fetch messages.")
+            status = '200 OK'
+            data = json.dumps({'user_id': None})
+            start_response(status, headers)
+            return [data.encode('utf-8')]
         else:
             print(f"Fetching messages for user_id: {user_id}")
 
             fetched_user_id = self.fetch_user_id_from_database(user_id)
-            
+
             if fetched_user_id is not None:
                 user_id = fetched_user_id
 
-        status = '200 OK'
-        data = json.dumps({'user_id': str(user_id)})
-        start_response(status, headers)
+            print("Fetched user_id:", user_id)
 
-        # Устанавливаем куку
-        start_response(status, headers + [('Set-Cookie', f'user_id={user_id}; Path=/')])
-
-        return [data.encode('utf-8')]
-
-
-
-
-
-
-
-
-
-
-
+            status = '200 OK'
+            data = json.dumps({'user_id': str(user_id)})  
+            start_response(status, headers + [('Set-Cookie', f'user_id={user_id}; Path=/')])
+            return [data.encode('utf-8')]
+        
 class SendMessageView(View):
     def response(self, environ, start_response):
         message, user_id = self.get_message_and_user_from_request(environ)
 
         if message and user_id:
             timestamp = int(time.time())
-            # Добавим получение никнейма из базы данных
-            nickname = self.get_nickname_from_database(user_id)
-            # Сформируем сообщение с никнеймом
-            full_message = f"{nickname}: {message}"
+            #nickname = self.get_nickname_from_database(user_id)
+            full_message = "{message}"
             self.save_message_to_db(full_message, user_id, timestamp)
 
             status = '200 OK'
@@ -180,34 +171,38 @@ class SendMessageView(View):
 
         start_response(status, headers)
         return [data.encode('utf-8')]
-
+    
     def save_message_to_db(self, message, user_id, timestamp):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO messages (user_id, message_text, timestamp) VALUES (?, ?, ?)', (user_id, message, timestamp))
+        cursor.execute('INSERT INTO messages (user_id, sender, message_text, timestamp) VALUES (?, ?, ?, ?)',
+                    (user_id, self.get_nickname_from_database(user_id), message, timestamp))
         conn.commit()
         conn.close()
+
 
     def get_message_and_user_from_request(self, environ):
         try:
             request_body_size = int(environ.get('CONTENT_LENGTH', 0))
             request_body = environ['wsgi.input'].read(request_body_size).decode('utf-8')
 
-            parsed_body = parse_qs(request_body)
+            parsed_body = json.loads(request_body)
 
-            message = parsed_body.get('message', [''])[0]
+            message = parsed_body.get('message', '')
+            user_id = parsed_body.get('user_id', '')
 
-            # Получаем user_id из куков
-            user_id_cookie = environ.get('HTTP_COOKIE', '').split('; ')
-            user_id_cookie = dict(item.split('=') for item in user_id_cookie).get('user_id', '')
-
-            # Используем user_id из куков
-            user_id = user_id_cookie if user_id_cookie else 'undefined'
+            if not message or not user_id:
+                raise ValueError("Invalid message or user_id")
 
             return message, user_id
-        except Exception as e:
-            print(f"Ошибка при извлечении сообщения и user_id: {e}")
+        except ValueError as ve:
+            print(f"ValueError: {ve}")
             return None, None
+        except Exception as e:
+            print(f"Error while extracting message and user_id: {e}")
+            return None, None
+
+        
 
     def get_nickname_from_database(self, user_id):
         conn = sqlite3.connect('messages.db')
@@ -216,7 +211,13 @@ class SendMessageView(View):
         nickname = cursor.fetchone()
         conn.close()
 
-        return nickname[0] if nickname else 'Guest'  # Замените 'Guest' на значение по умолчанию
+        if nickname:
+            print(f"Nickname found in the database: {nickname[0]}")
+            return nickname[0]
+        else:
+            print(f"Nickname not found in the database for user_id: {user_id}")
+            return 'Guest' #Гостевой пользователь
+
 
 class IndexView(TemplateView):
     template = 'templates/index.html'
@@ -272,6 +273,7 @@ class RegisterView(TemplateView):
 
         # Если пользователь не найден, регистрируем нового
         cursor.execute('INSERT INTO users (username, password, user_id) VALUES (?, ?, ?)', (username, password, user_id))
+        cursor.execute('INSERT INTO messages (user_id) VALUES (?)', (user_id,))
         conn.commit()
         conn.close()
         return True  # Пользователь успешно зарегистрирован
@@ -301,7 +303,7 @@ class LoginView(TemplateView):
                     # Вместо редиректа возвращаем JSON с информацией о редиректе
                     status = '200 OK'
                     headers = [('Content-type', 'application/json')]
-                    data = json.dumps({'redirect': '/'})
+                    data = json.dumps({'redirect': '/', 'user_id': str(user_id[0])})  
                     start_response(status, headers)
                     return [data.encode('utf-8')]
                 else:
@@ -319,7 +321,6 @@ class LoginView(TemplateView):
         else:
             return super().response(environ, start_response)
 
-
     def authenticate_user(self, username, password):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
@@ -333,7 +334,7 @@ class LoginView(TemplateView):
         conn.close()
 
         # Если пользователь существует, возвращаем его ID, иначе None
-        print("Authenticated user_id:", user_id)  # Добавим эту строку
+        print("Authenticated user_id:", user_id)  
 
         return user_id
 
