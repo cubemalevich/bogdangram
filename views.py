@@ -72,35 +72,33 @@ class GetMessageView(View):
         status = '200 OK'
 
         query_params = parse_qs(environ.get('QUERY_STRING', ''))
-        message_id = int(query_params.get('message_id', [0])[0])
+        timestamp = int(query_params.get('timestamp', [0])[0])
 
-        messages, timestamp = self.get_new_messages_from_db(message_id)
+        messages, timestamp = self.get_new_messages_from_db(timestamp)
         data = json.dumps({'messages': messages, 'timestamp': timestamp})
-
-        self.last_timestamp = timestamp
 
         print(f"Sending messages: {data}")
 
         start_response(status, headers)
         return [data.encode('utf-8')]
 
-    def get_new_messages_from_db(self, message_id):
+    def get_new_messages_from_db(self, timestamp):
         conn = sqlite3.connect('messages.db')
         cursor = conn.cursor()
-        cursor.execute('SELECT sender, message_text, timestamp FROM messages WHERE message_id > ?', (message_id,))
+        cursor.execute('SELECT sender, message_text, timestamp FROM messages WHERE timestamp > ?', (timestamp,))
         messages = cursor.fetchall()
         conn.close()
 
         if messages:
             timestamp = max(msg[2] for msg in messages)
         else:
-            timestamp = self.last_timestamp
+            timestamp = timestamp
 
         formatted_messages = [
             {'sender': msg[0], 'message_text': msg[1].split(': ', 1)[1]} if msg[0] else {'sender': 'Guest', 'message_text': msg[1].split(': ', 1)[1]} for msg in messages
         ]
 
-        return formatted_messages, timestamp    
+        return formatted_messages, timestamp
 
 class GetUserIdView(View):
     def fetch_user_id_from_database(self, username):
