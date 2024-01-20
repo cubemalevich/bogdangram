@@ -37,23 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(data => {
                 console.log("Server response:", data);
-                localStorage.setItem('username', username);
+                sessionStorage.setItem('username', username);
 
                 if (data.redirect) {
                     console.log("Redirecting to:", data.redirect);
                     window.location.replace(data.redirect);
                 } else if (data.error) {
-                    localStorage.setItem('username', username);
-                    console.log("Username saved to localStorage:", username);
-                    console.log("Current localStorage:", localStorage);
+                    sessionStorage.setItem('username', username);
+                    console.log("Username saved to sessionStorage:", username);
+                    console.log("Current sessionStorage:", sessionStorage);
 
                 } else {
                     if (data.user_id && data.user_id !== 'null') {
-                        localStorage.setItem('username', username);
+                        sessionStorage.setItem('username', username);
                         getUserId(username);
                     } else {
                         console.error("User ID is undefined, empty, or 'null'. Cannot proceed.");
-                        localStorage.setItem('username', username);
+                        sessionStorage.setItem('username', username);
                     }
                 }
             })
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch('/get_user_id')
             .then(response => response.json())
             .then(data => {
-                localStorage.setItem('username', username);
+                sessionStorage.setItem('username', username);
             })
             .catch(error => {
                 console.error("Error fetching user_id:", error);
