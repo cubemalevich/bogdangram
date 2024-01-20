@@ -43,17 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-
     messageForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const message = messageInput.value;
 
         if (message) {
-            const username = localStorage.getItem('username');
+            const username = sessionStorage.getItem('username');
             addMessage(message, username);
             messageInput.value = "";
 
-            console.log("Sending message to server. Message:", message);
+            //console.log("Sending message to server. Message:", message);
 
             const requestBody = { message, username };
             

@@ -59,12 +59,3 @@ def app(environ, start_response):
     # Возвращаем HTTP-ответ с сгенерированной страницей
     return resp
 
-    
-    # Изменение вызова метода response(), передаем только один аргумент
-    #resp = view.response(environ, start_response)  # Передаем environ в метод response()
-    # Возвращаем HTTP-ответ с сгенерированной страницей
-    #status = resp.status    #'200 OK'
-    #file_name = route(environ['REQUEST_URI'])
-    #response_headers = resp.headers
-    #start_response(status, response_headers)
-    #return [bytes(resp.data, "utf-8")]

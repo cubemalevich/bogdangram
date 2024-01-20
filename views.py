@@ -7,8 +7,6 @@ import uuid
 from urllib.parse import parse_qs
 from mimes import get_mime
 from webob import Request
-from webob.exc import HTTPFound
-
 
 Response = namedtuple("Response", "status headers data")
 
@@ -61,6 +59,11 @@ class TemplateView(View):
         with open(file_name, 'r', encoding='utf-8') as file:
             return file.read()
 
+class IndexView(TemplateView):
+    template = 'templates/index.html'
+
+class NotFoundView(TemplateView):
+    pass
 
 class GetMessageView(View):
     def __init__(self, url) -> None:
@@ -77,7 +80,7 @@ class GetMessageView(View):
         messages, timestamp = self.get_new_messages_from_db(timestamp)
         data = json.dumps({'messages': messages, 'timestamp': timestamp})
 
-        print(f"Sending messages: {data}")
+        #print(f"Sending messages: {data}")
 
         start_response(status, headers)
         return [data.encode('utf-8')]
@@ -220,13 +223,6 @@ class SendMessageView(View):
             return nickname[0]
         else:
             return None
-
-
-class IndexView(TemplateView):
-    template = 'templates/index.html'
-
-class NotFoundView(TemplateView):
-    pass
 
 class RegisterView(TemplateView):
     template = 'templates/register.html'
