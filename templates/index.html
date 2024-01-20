@@ -12,11 +12,21 @@
         <div class="chat-box" id="chat-box">
             <!-- Здесь будут отображаться сообщения -->
         </div>
-        <form id="message-form">
-            <input type="hidden" id="user-id" name="user_id" value="">
-            <input type="text" id="message-input" placeholder="Введите сообщение" autocomplete="off">
-            <button type="submit">Отправить</button>
-        </form>
+            <form id="message-form">
+                <div id="input-container">
+                    <input type="text" id="message-input" placeholder="Введите сообщение" autocomplete="off">
+                    <button type="button" id="emoji-button">😊</button>
+                    <button type="submit">Отправить</button>
+                    <!-- Обновленный пикер смайликов -->
+                <div id="emoji-picker" class="emoji-picker">
+                    <div class="emoji-row" id="emoji-row-1"></div>
+                    <div class="emoji-row" id="emoji-row-2"></div>
+                    <div class="emoji-row" id="emoji-row-3"></div>
+                    <div class="emoji-row" id="emoji-row-4"></div>
+                    <div class="emoji-row" id="emoji-row-5"></div>
+                </div>
+                </div>
+            </form>
     </div>
 </body>
 </html>

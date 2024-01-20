@@ -2,6 +2,44 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatBox = document.getElementById("chat-box");
     const messageForm = document.getElementById("message-form");
     const messageInput = document.getElementById("message-input");
+    const emojiButton = document.getElementById("emoji-button");
+    const emojiPicker = document.getElementById("emoji-picker");
+
+    const emojiList = [
+        '😁', '😂', '😃', '😄', '😅', '😆', '😇', '😈', '😉', '😊',
+        '😋', '😌', '😍', '😎', '😏', '😐', '😒', '😓', '😔', '😖',
+        '😘', '😚', '😜', '😝', '😞', '😠', '😡', '😢', '😣', '😤',
+        '😥', '😨', '😩', '😪', '😫', '😭', '😰', '😱', '👍', '🎉',
+        '❤️', '😸', '😹', '😺', '😻', '😼', '😽', '😾', '😿', '🙀',
+        '💩', '👴', '🙅', '🙆', '🙇', '🙈', '🙉', '🙊', '🙋', '🙌',
+        '🙍', '🙎', '🙏', '🐌', '🐍', '🐎', '🐑', '🐒', '🐔', '🐗'
+    ];
+
+    const emojisPerRow = 10;
+
+    emojiList.forEach((emoji, index) => {
+        const emojiSpan = document.createElement('span');
+        emojiSpan.innerText = emoji;
+        emojiPicker.appendChild(emojiSpan);
+
+        if ((index + 1) % emojisPerRow === 0) {
+            const breakElement = document.createElement('br');
+            emojiPicker.appendChild(breakElement);
+        }
+    });
+
+    emojiButton.addEventListener("click", function () {
+        emojiPicker.classList.toggle("show");
+    });
+
+    emojiPicker.addEventListener("click", function (event) {
+        if (event.target.tagName === "SPAN") {
+            const emoji = event.target.innerText;
+            messageInput.value += emoji;
+        }
+        emojiPicker.classList.remove("show");
+    });
+
     let lastTimestamp = 0;
 
     function getMessages() {
@@ -36,9 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
             console.log("Displaying:", displaySender, displayMessage);
     
-            messageText.innerText = `${displaySender} - ${displayMessage}`;
+            const senderDiv = document.createElement("div");
+            senderDiv.className = "sender";
+            senderDiv.innerText = displaySender;
+            messageDiv.appendChild(senderDiv);
     
+            messageText.innerText = displayMessage;
             messageDiv.appendChild(messageText);
+    
             chatBox.appendChild(messageDiv);
         }
     }
@@ -51,8 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const username = sessionStorage.getItem('username');
             addMessage(message, username);
             messageInput.value = "";
-
-            //console.log("Sending message to server. Message:", message);
 
             const requestBody = { message, username };
             
