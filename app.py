@@ -6,7 +6,7 @@ from routes import routes
 from mimes import get_mime
 from views import NotFoundView
 
-conn = sqlite3.connect('messages.db')
+conn = sqlite3.connect('data.db')
 cursor = conn.cursor()
 
 # Таблица учетных данных пользователей

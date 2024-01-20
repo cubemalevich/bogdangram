@@ -86,7 +86,7 @@ class GetMessageView(View):
         return [data.encode('utf-8')]
 
     def get_new_messages_from_db(self, timestamp):
-        conn = sqlite3.connect('messages.db')
+        conn = sqlite3.connect('data.db')
         cursor = conn.cursor()
         cursor.execute('SELECT sender, message_text, timestamp FROM messages WHERE timestamp > ?', (timestamp,))
         messages = cursor.fetchall()
@@ -105,7 +105,7 @@ class GetMessageView(View):
 
 class GetUserIdView(View):
     def fetch_user_id_from_database(self, username):
-        connection = sqlite3.connect('messages.db')
+        connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
 
         cursor.execute("SELECT user_id FROM users WHERE username=?", (username,))
@@ -181,7 +181,7 @@ class SendMessageView(View):
         return [data.encode('utf-8')]
     
     def save_message_to_db(self, message, username, timestamp):
-        conn = sqlite3.connect('messages.db')
+        conn = sqlite3.connect('data.db')
         cursor = conn.cursor()
         user_id = self.get_nickname_from_database(username)
         cursor.execute('INSERT INTO messages (user_id, sender, message_text, timestamp) VALUES (?, ?, ?, ?)', (user_id, username, message, timestamp))
@@ -213,7 +213,7 @@ class SendMessageView(View):
 
 
     def get_nickname_from_database(self, username):
-        conn = sqlite3.connect('messages.db')
+        conn = sqlite3.connect('data.db')
         cursor = conn.cursor()
         cursor.execute('SELECT username FROM users WHERE username=?', (username,))
         nickname = cursor.fetchone()
@@ -256,7 +256,7 @@ class RegisterView(TemplateView):
 
     def register_user(self, username, password):
         print(f"Received username reg_us: {username}, password: {password}")
-        conn = sqlite3.connect('messages.db')
+        conn = sqlite3.connect('data.db')
         cursor = conn.cursor()
 
         user_id = uuid.uuid4().hex # Генерируем уникальный идентификатор пользователя
@@ -316,7 +316,7 @@ class LoginView(TemplateView):
             return super().response(environ, start_response)
 
     def authenticate_user(self, username, password):
-        conn = sqlite3.connect('messages.db')
+        conn = sqlite3.connect('data.db')
         cursor = conn.cursor()
 
         #print(f"Received username: {username}, password: {password}")
