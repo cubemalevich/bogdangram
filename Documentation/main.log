@@ -1,0 +1,1338 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.1.22)  23 JAN 2024 02:04
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+(setup.tex (vkr.cls
+Document Class: vkr VKR class
+(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+(C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-08-29 L3 programming layer (loader) 
+
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count181
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count182
+\g__pdf_backend_annotation_int=\count183
+\g__pdf_backend_link_int=\count184
+))
+Package: xparse 2023-08-29 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count185
+\l__fontspec_language_int=\count186
+\l__fontspec_strnum_int=\count187
+\l__fontspec_tmp_int=\count188
+\l__fontspec_tmpa_int=\count189
+\l__fontspec_tmpb_int=\count190
+\l__fontspec_tmpc_int=\count191
+\l__fontspec_em_int=\count192
+\l__fontspec_emdef_int=\count193
+\l__fontspec_strong_int=\count194
+\l__fontspec_strongdef_int=\count195
+\l__fontspec_tmpa_dim=\dimen140
+\l__fontspec_tmpb_dim=\dimen141
+\l__fontspec_tmpc_dim=\dimen142
+
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+
+\pagetop=\skip48
+\pagebottom=\skip49
+\pageleft=\skip50
+\pageright=\skip51
+\pwidth=\skip52
+\pheight=\skip53
+\saved@arstrutbox=\box52
+\c@section=\count196
+\c@subsection=\count197
+\c@subsubsection=\count198
+\c@paragraph=\count199
+\c@figure=\count266
+\c@figurecnt=\count267
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\c@table=\count268
+\c@tablecnt=\count269
+\c@lastpage=\count270
+\c@числоПлакатов=\count271
+\c@bibcount=\count272
+)
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2023/09/29 v3.95 The Babel package
+\babel@savecnt=\count273
+\U@D=\dimen143
+\l@unhyphenated=\language79
+
+(C:\Program Files\MiKTeX\tex/generic/babel\xebabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count274
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+)
+(C:\Program Files\MiKTeX\tex/latex/babel-russian\russianb.ldf
+File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
+Language: russian 2020/09/09 1.3k Russian support for the Babel system
+Package babel Info: Making " an active character on input line 124.
+Package babel Info: Default for \cyrdash is provided on input line 163.
+))
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/ru\babel-russian.tex
+Package babel Info: Importing font and identification data for russian
+(babel)             from babel-ru.ini. Reported on input line 11.
+)
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
+
+(C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(C:\Program Files\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Program Files\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Program Files\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-08-07 v2.53 Cross-referencing by name of section
+
+(C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count275
+)
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
+)
+\@linkdim=\dimen146
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count279
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 3153.
+Package hyperref Info: Hyper figures OFF on input line 4167.
+Package hyperref Info: Link nesting OFF on input line 4172.
+Package hyperref Info: Hyper index ON on input line 4175.
+Package hyperref Info: Plain pages OFF on input line 4182.
+Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4434.
+\c@Hy@tempcnt=\count280
+
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4772.
+\XeTeXLinkMargin=\dimen147
+
+(C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count281
+\Field@Width=\dimen148
+\Fld@charsize=\dimen149
+Package hyperref Info: Hyper figures OFF on input line 6051.
+Package hyperref Info: Link nesting OFF on input line 6056.
+Package hyperref Info: Hyper index ON on input line 6059.
+Package hyperref Info: backreferencing OFF on input line 6066.
+Package hyperref Info: Link coloring OFF on input line 6071.
+Package hyperref Info: Link coloring with OCG OFF on input line 6076.
+Package hyperref Info: PDF/A mode OFF on input line 6081.
+
+(C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2023-07-08 v7.01b Hyperref driver for XeTeX
+
+(C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count285
+\HyField@AnnotCount=\count286
+\Fld@listcount=\count287
+\c@bookmark@seq@number=\count288
+
+(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip56
+)
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count289
+\float@exts=\toks18
+\float@box=\box54
+\@float@everytoks=\toks19
+\@floatcapt=\box55
+)
+(C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+))
+(C:\Program Files\MiKTeX\tex/latex/xltabular\xltabular.sty
+Package: xltabular 2020/11/04 v0.2e `xltabular' package (hv,RN)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen150
+\ar@mcellbox=\box56
+\extrarowheight=\dimen151
+\NC@list=\toks20
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box57
+)
+\TX@col@width=\dimen152
+\TX@old@table=\dimen153
+\TX@old@col=\dimen154
+\TX@target=\dimen155
+\TX@delta=\dimen156
+\TX@cols=\count290
+\TX@ftn=\toks21
+)
+(C:\Program Files\MiKTeX\tex/latex/ltablex\ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+
+(C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count291
+\LTcapwidth=\dimen157
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count292
+\LT@rows=\count293
+\c@LT@tables=\count294
+\c@LT@chunks=\count295
+\LT@p@ftn=\toks22
+)))
+(C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen158
+\c@nlinenum=\count296
+\TeXr@lab=\toks23
+)
+
+Package array Warning: Redefining primitive column r on input line 16.
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {#1 -- #2}\ifdim \wd \@tempboxa >\hsize #1 -- #2\par \else \
+global \@minipagefalse \if \instring {Таб}{#1} \hb@xt@ \hsize {\box \@tempboxa 
+\hfil }\else \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \fi \vskip \below
+captionskip  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count297
+\c@continuedfloat=\count298
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(C:\Program Files\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen167
+\enit@toks=\toks24
+\enit@inbox=\box63
+\enit@count@id=\count299
+
+! Undefined control sequence.
+<argument> \scriptsize 
+                       
+l.1084 \SetEnumitemSize{script}\scriptsize
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \small 
+                  
+l.1087 \SetEnumitemSize{small}\small
+                                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \Large 
+                  
+l.1090 \SetEnumitemSize{Large}\Large
+                                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \LARGE 
+                  
+l.1091 \SetEnumitemSize{LARGE}\LARGE
+                                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \huge 
+                 
+l.1092 \SetEnumitemSize{huge}\huge
+                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \Huge 
+                 
+l.1093 \SetEnumitemSize{Huge}\Huge
+                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\enitdp@description=\count300
+) (C:\Program Files\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count301
+\lst@gtempboxa=\box64
+\lst@token=\toks25
+\lst@length=\count302
+\lst@currlwidth=\dimen168
+\lst@column=\count303
+\lst@pos=\count304
+\lst@lostspace=\dimen169
+\lst@width=\dimen170
+\lst@newlines=\count305
+\lst@lineno=\count306
+\lst@maxwidth=\dimen171
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count307
+\lst@skipnumbers=\count308
+\lst@framebox=\box65
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+Package fontspec Info: Font family 'Verdana(0)' created for font 'Verdana'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale=0.7].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/B/OT:script=latn;language=dflt;+smcp;
+"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/I/OT:script=latn;language=dflt;+smcp;
+"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.7]"Verdana/BI/OT:script=latn;language=dflt;+smcp
+;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)) (main.aux
+
+LaTeX Warning: Label `python' multiply defined.
+
+
+LaTeX Warning: Label `python' multiply defined.
+
+
+LaTeX Warning: Label `python' multiply defined.
+
+
+LaTeX Warning: Label `python' multiply defined.
+
+
+LaTeX Warning: Label `python' multiply defined.
+
+
+LaTeX Warning: Label `JavaScript' multiply defined.
+
+
+LaTeX Warning: Label `JavaScript' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+0.
+ (C:\Program Files\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
+LaTeX Font Info:    Redeclaring math accent \check on input line 30.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 3
+0.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+30.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+30.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/Verdana(0)/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/Verdana(0)/b/n on input line 30.
+LaTeX Info: Redefining \th on input line 30.
+Package hyperref Info: Link coloring OFF on input line 30.
+ (main.out) (main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count309
+
+! Undefined control sequence.
+<argument> \ТемаВтораяСтрока 
+                             
+l.32 \ifПрактика
+                {}\else{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1] (ЛистЗадания.tex
+! Undefined control sequence.
+l.40 ^^I1. Тема «\Тема\ \ТемаВтораяСтрока
+                                         »
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2] (main.lop)
+\tf@lop=\write4
+\openout4 = `main.lop'.
+
+
+Overfull \hbox (4.70218pt too wide) in paragraph at lines 95--106
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
+
+ []
+
+) (Реферат.tex [3]
+\c=\count310
+\last=\count311
+\pnul=\count312
+\c=\count313
+\last=\count314
+\pnul=\count315
+\c=\count316
+\last=\count317
+\pnul=\count318
+
+Underfull \hbox (badness 3449) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 HTML, CSS, frontend, регистрация пользователя, вх
+од в систему, чат,
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/14.4 WebSockets, серверная часть, Python, SQLite, Wait
+ress, web-разработка,
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 9--10
+\TU/TimesNewRoman(0)/m/n/14.4 также привлечь новых пользователей своей удобной 
+и привлекательной
+ []
+
+[4]
+\c=\count319
+\last=\count320
+\pnul=\count321
+\c=\count322
+\last=\count323
+\pnul=\count324
+\c=\count325
+\last=\count326
+\pnul=\count327
+) [5] (main.toc [6])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ (main.lpc)
+\tf@lpc=\write6
+\openout6 = `main.lpc'.
+
+ (Обозначения.tex [7]) (Введение.tex [8]
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(0)/m/n/14.4 При разработке использовались современные техно
+логии веб-
+ []
+
+\c=\count328
+\last=\count329
+\pnul=\count330
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]\TU/TimesNewRoman(0)/m/it/14.4 В первом разделе \TU/TimesNewRoman(0)/m/n/14.4
+ производится анализ существующих веб-
+ []
+
+) (Анализ.tex [10]
+Underfull \hbox (badness 4193) in paragraph at lines 4--5
+[]\TU/TimesNewRoman(0)/m/n/14.4 История веб-мессенджеров тесно связана с развит
+ием интернет-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]\TU/TimesNewRoman(0)/m/n/14.4 История веб-мессенджеров демонстрирует постоянн
+ое развитие
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 19--20
+\TU/TimesNewRoman(0)/m/n/14.4 средств онлайн-коммуникации, от простых текстовых
+ чатов до много-
+ []
+
+[11]
+Underfull \hbox (badness 1033) in paragraph at lines 31--32
+\TU/TimesNewRoman(0)/m/n/14.4 Slack, Microsoft Teams) акцентируют внимание на к
+оллективной работе,
+ []
+
+
+Underfull \hbox (badness 6978) in paragraph at lines 33--34
+[]\TU/TimesNewRoman(0)/b/n/14.4 Использование искусственного интеллекта: \TU/Ti
+mesNewRoman(0)/m/n/14.4 Некоторые веб-
+ []
+
+File: images/icq.png Graphic file (type bmp)
+<images/icq.png>
+File: images/telegram.png Graphic file (type bmp)
+<images/telegram.png>
+) (ТехЗадание.tex [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+[]\TU/TimesNewRoman(0)/m/n/14.4 Основной целью данного проекта является разрабо
+тка веб-
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 10--11
+[]\TU/TimesNewRoman(0)/m/n/14.4 Целью разработки веб-мессенджера является предо
+ставление эф-
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 10--11
+\TU/TimesNewRoman(0)/m/n/14.4 фективного инструмента для обмена мгновенными соо
+бщениями в веб-
+ []
+
+[14]
+File: images/message.png Graphic file (type bmp)
+<images/message.png>
+ [15]
+File: images/online.png Graphic file (type bmp)
+<images/online.png>
+ [16]
+File: images/smile.png Graphic file (type bmp)
+<images/smile.png>
+ [17]
+
+LaTeX Warning: Reference `fig:maket2' on page 18 undefined on input line 65.
+
+File: images/komp_messenger.png Graphic file (type bmp)
+<images/komp_messenger.png>
+[18] [19]
+
+! LaTeX Error: File `precend' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 ...cludegraphics[width=1\linewidth]{precend}
+                                                  }
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.ai,.AI,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF,.bmp,.BMP
+,.ps,.PS,.eps,.EPS,.mps,.MPS
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[20]) (ТехПроект.tex [21]
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]\TU/TimesNewRoman(0)/b/n/14.4 3.2 Описание используемых библеотек и языков
+ []
+
+[22] [23]
+File: images/Server_diag.png Graphic file (type bmp)
+<images/Server_diag.png>
+ [24]
+File: images/klient_diag.png Graphic file (type bmp)
+<images/klient_diag.png>
+ [25]
+File: images/class_diag.eps Graphic file (type eps)
+<images/class_diag.eps>
+) (РабочийПроект.tex [26]
+Overfull \hbox (11.34636pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 TemplateView| 
+ []
+
+
+Overfull \hbox (16.38777pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 NotFoundView| 
+ []
+
+
+Overfull \hbox (29.15651pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 GetMessageView| 
+ []
+
+
+Overfull \hbox (29.16484pt too wide) in paragraph at lines 27--27
+ \TU/TimesNewRoman(0)/m/n/14.4 get_new_messages_from_db| 
+ []
+
+
+Overfull \hbox (17.95573pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 GetUserIdView| 
+ []
+
+
+Overfull \hbox (32.33592pt too wide) in paragraph at lines 27--27
+ \TU/TimesNewRoman(0)/m/n/14.4 fetch_user_id_from_database| 
+ []
+
+
+Overfull \hbox (37.1651pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 SendMessageView| 
+ []
+
+
+Overfull \hbox (78.73512pt too wide) in paragraph at lines 27--27
+ \TU/TimesNewRoman(0)/m/n/14.4 get_message_and_user_from_request| 
+ []
+
+
+Overfull \hbox (5.96745pt too wide) in paragraph at lines 27--27
+ []|\TU/TimesNewRoman(0)/m/n/14.4 RegisterView| 
+ []
+
+[27] [28]
+File: images/clear_reg.png Graphic file (type bmp)
+<images/clear_reg.png>
+ [29]
+File: images/full_reg.png Graphic file (type bmp)
+<images/full_reg.png>
+File: images/db_admin.png Graphic file (type bmp)
+<images/db_admin.png>
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+[]\TU/TimesNewRoman(0)/m/n/14.4 Предусловие: пользователь не авторизован в сист
+еме, веб-
+ []
+
+File: images/clear_log.png Graphic file (type bmp)
+<images/clear_log.png>
+File: images/full_log.png Graphic file (type bmp)
+<images/full_log.png>
+[31]
+File: images/nonlog_guest_mes.png Graphic file (type bmp)
+<images/nonlog_guest_mes.png>
+ [32]
+File: images/dbuser_clear.png Graphic file (type bmp)
+<images/dbuser_clear.png>
+ [33]
+File: images/log_cub_mes.png Graphic file (type bmp)
+<images/log_cub_mes.png>
+ [34]
+File: images/db_messages.png Graphic file (type bmp)
+<images/db_messages.png>
+ [35]
+File: images/smile_picker.png Graphic file (type bmp)
+<images/smile_picker.png>
+File: images/send_smile.png Graphic file (type bmp)
+<images/send_smile.png>
+ [36]
+File: images/db_messages_smile.png Graphic file (type bmp)
+<images/db_messages_smile.png>
+) (Заключение.tex [37]
+Underfull \hbox (badness 1960) in paragraph at lines 9--10
+[]\TU/TimesNewRoman(0)/m/n/14.4 Проведен анализ существующих веб-мессенджеров, 
+выделены
+ []
+
+) (СписокИсточников.tex [38] [39]
+Underfull \hbox (badness 3657) in paragraph at lines 27--28
+[]\TU/TimesNewRoman(0)/m/n/14.4 Кириченко А.;Никольский А. Web на практике. CSS
+, HTML,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+[]\TU/TimesNewRoman(0)/m/n/14.4 Веб-технологии для разработчиков [Электронный р
+есурс]
+ []
+
+) (Код.tex [40] (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...ng[language=JavaScript, frame=none]{app.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...ng[language=JavaScript, frame=none]{app.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...ng[language=JavaScript, frame=none]{app.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...ng[language=JavaScript, frame=none]{app.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 4.
+LaTeX Font Info:    Font shape `TU/Verdana(0)/m/n' will be
+(Font)              scaled to size 10.07994pt on input line 4.
+(app.js
+Missing character: There is no 😁 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😂 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😃 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😄 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😅 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😆 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😇 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😈 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😉 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😊 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😋 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😌 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😍 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😎 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😏 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😐 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😒 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😓 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😔 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😖 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😘 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😚 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😜 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😝 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😞 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😠 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😡 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😢 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😣 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😤 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😥 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😨 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😩 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😪 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😫 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😭 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😰 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😱 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 👍 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🎉 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no ❤ in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no ️ in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😸 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😹 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😺 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😻 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😼 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😽 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😾 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 😿 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙀 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 💩 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 👴 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙅 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙆 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙇 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙈 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙉 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙊 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙋 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙌 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙍 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙎 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🙏 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐌 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐍 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐎 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐑 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐒 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐔 in font Verdana/OT:script=latn;language=dflt;!
+Missing character: There is no 🐗 in font Verdana/OT:script=latn;language=dflt;!
+[41] [42]) (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...[language=JavaScript, frame=none]{login.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...[language=JavaScript, frame=none]{login.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...[language=JavaScript, frame=none]{login.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...[language=JavaScript, frame=none]{login.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(login.js [43]) (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ...guage=JavaScript, frame=none]{register.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ...guage=JavaScript, frame=none]{register.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ...guage=JavaScript, frame=none]{register.js}
+                                                  
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ...guage=JavaScript, frame=none]{register.js}
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(register.js [44]) (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+) (index.html [45]
+Missing character: There is no 😊 in font Verdana/OT:script=latn;language=dflt;!
+) (login.html) (register.html [46])
+(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (app.py [47])
+(views.py [48] [49] [50] [51] [52] [53] [54]) (mimes.py) (routes.py) [55]
+(run.py))
+
+! LaTeX Error: \begin{enumerate} on input line 25 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[56] (main.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 23841FBEB83D9C1AFB2E394D2D94D0C5;10446.
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 25 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 16973 strings out of 410379
+ 321794 string characters out of 5792314
+ 2204416 words of memory out of 5000000
+ 37977 multiletter control sequences out of 15000+600000
+ 559598 words of font info for 72 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 99i,9n,110p,649b,2501s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (56 pages).

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-container">
+                <input type="text" id="username" name="username" placeholder="Username" autocomplete="off" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder="Password" autocomplete="off" required>
+            </div>
+            <input type="hidden" id="user-id" name="user-id">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="/static/login.js"></script>
+</body>
+</html>

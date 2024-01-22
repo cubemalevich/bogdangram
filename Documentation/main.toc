@@ -1,0 +1,42 @@
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {russian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {russian}{}\relax 
+\contentsline {section}{ВВЕДЕНИЕ}{9}{section*.5}%
+\contentsline {section}{\numberline {1}Анализ предметной области}{11}{section.1}%
+\contentsline {subsection}{\numberline {1.1}История развития веб-мессенджеров}{11}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Веб-мессенджер: особенности и тенденции}{12}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Техническое задание}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Основание для разработки}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Цель и назначение разработки}{14}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Описание веб-мессенджера}{15}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Иконки и элементы интерфейса}{15}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Функциональные элементы}{18}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Требования пользователя к интерфейсу веб-мессенджера}{19}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Моделирование вариантов использования}{20}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Диаграмма прецедентов}{20}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Сценарии прецедентов программы}{20}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Требования к оформлению документации}{21}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Технический проект}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Общая характеристика организации решения задачи}{22}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Описание используемых библеотек и языков программирования}{22}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Серверная часть: Python}{22}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Веб-клиент: HTML, CSS, JavaScript}{22}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}База данных: SQLite 3}{22}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Основные функции мессенджера}{23}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Технические детали проекта}{23}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Обновление сообщений в реальном времени}{23}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Авторизация пользователей}{23}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Хранение данных}{23}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Интерфейс веб-клиента}{24}{subsubsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.5}Структура проекта}{24}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Структура серверной части}{24}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Структура веб-клиента}{25}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Диаграмма классов}{26}{subsubsection.3.5.3}%
+\contentsline {section}{\numberline {4}Рабочий проект}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Классы, используемые при разработке веб-мессенджера}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Системное тестирование веб-мессенджера}{29}{subsection.4.2}%
+\contentsline {section}{ЗАКЛЮЧЕНИЕ}{38}{section*.28}%
+\contentsline {section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{38}{Item.37}%
+\contentsline {section}{ПРИЛОЖЕНИЕ А\ Фрагменты исходного кода программы}{41}{section*.30}%
